@@ -21,9 +21,10 @@ body {
 
   /* CENTRADO TOTAL */
   display: flex;
+  flex-direction: column;   /* elementos en columna, no fila */
   justify-content: center; /* centra horizontal */
-  align-items: center;     /* centra vertical */
-  min-height: 100vh;       /* altura completa de la ventana */
+  align-items: center; /* centra vertical */
+  min-height: 100vh; /* altura completa de la ventana */
   padding: 20px;
   transition: background 0.5s, color 0.5s;
 }
@@ -37,7 +38,7 @@ body {
   margin: auto;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0px 4px 12px rgba(0,0,0,0.12);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
 }
 
 /* ===========================
@@ -55,13 +56,13 @@ body {
   display: flex;
   justify-content: center;
   gap: 10px;
-  flex-wrap: wrap;      /* se van a nueva línea si no caben */
+  flex-wrap: wrap; /* se van a nueva línea si no caben */
   margin-bottom: 20px;
 }
 
 .botones button {
   padding: 10px 18px;
-  font-size: 1rem;      /* 16px */
+  font-size: 1rem; /* 16px */
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -71,21 +72,27 @@ body {
 }
 
 /* Colores específicos */
-#btnAgregar { background: #4CAF50; color: white; }
-#btnAgregar:hover { background: #3e8e41; }
+#btnAgregar {
+  background: #4caf50;
+  color: white;
+}
+#btnAgregar:hover {
+  background: #3e8e41;
+}
 
-#btnReset { background: #ff4b4b; color: white; }
-#btnReset:hover { background: #d93636; }
-
-#btnModo { background: #222; color: white; }
-#btnModo:hover { background: #555; }
-
+#btnReset {
+  background: #ff4b4b;
+  color: white;
+}
+#btnReset:hover {
+  background: #d93636;
+}
 /* ===========================
    LISTA DE TAREAS
 =========================== */
 h2 {
   margin-bottom: 10px;
-  font-size: 1.2rem;  /* 19px */
+  font-size: 1.2rem; /* 19px */
 }
 
 ul {
@@ -114,7 +121,6 @@ li {
   }
 }
 
-
 /* ===========================
    RESPONSIVE MÓVIL
 =========================== */
@@ -123,4 +129,12 @@ li {
     width: 100%;
     margin-bottom: 10px;
   }
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #555;
+  transition: color 0.5s, background 0.5s;
 }
