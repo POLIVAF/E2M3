@@ -1,84 +1,93 @@
+/* ===========================
+   RESET Y BASE
+=========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px; /* tamaño base consistente */
+}
+
 body {
   font-family: Arial, sans-serif;
-  background: #eef2f3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
+  font-size: 16px;         /* tamaño de texto consistente */
+  line-height: 1.5;        /* altura de línea legible */
+  text-align: center;       /* títulos centrados */
+  background: #f5f5f5;
+  color: #222;
+  padding: 20px;
+  transition: background 0.5s, color 0.5s;
 }
 
+/* ===========================
+   CONTENEDOR PRINCIPAL
+=========================== */
 .container {
-  text-align: center;
   background: white;
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.12);
 }
 
-/* Estilo general de todos los botones */
-button {
-  background: #4caf50;
-  color: white;
-  border: none;
-  padding: 15px 25px;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 18px;
-  transition: 0.3s;
-  flex: 1 1 auto; /* permite que crezcan y se achiquen proporcionalmente */
-  min-width: 100px; /* ancho mínimo para que no se aplasten */
+/* ===========================
+   TÍTULO
+=========================== */
+.titulo {
+  font-size: 1.8rem; /* 28.8px */
+  margin-bottom: 20px;
 }
 
-/* Botones dentro del contenedor .botones */
+/* ===========================
+   BOTONES
+=========================== */
 .botones {
   display: flex;
   justify-content: center;
-  gap: 10px; /* espacio entre botones */
-  flex-wrap: wrap; /* permite que se vayan a la siguiente línea en pantallas pequeñas */
+  gap: 10px;
+  flex-wrap: wrap;      /* se van a nueva línea si no caben */
   margin-bottom: 20px;
 }
 
 .botones button {
   padding: 10px 18px;
-  font-size: 14px;
+  font-size: 1rem;      /* 16px */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  flex: 1 1 auto;
+  min-width: 100px;
+  transition: 0.3s;
 }
 
-/* Colores de botones específicos */
-#btnAgregar {
-  background: #4caf50;
-  color: white;
-}
-#btnAgregar:hover {
-  background: #3e8e41;
-}
+/* Colores específicos */
+#btnAgregar { background: #4CAF50; color: white; }
+#btnAgregar:hover { background: #3e8e41; }
 
-#btnReset {
-  background: #ff4b4b;
-  color: white;
-}
-#btnReset:hover {
-  background: #d93636;
-}
+#btnReset { background: #ff4b4b; color: white; }
+#btnReset:hover { background: #d93636; }
 
-/* Hover general */
-button:hover {
-  background: #45a049;
-}
+#btnModo { background: #222; color: white; }
+#btnModo:hover { background: #555; }
 
-/* Media query para pantallas muy pequeñas */
-@media (max-width: 400px) {
-  .botones button {
-    width: 100%; /* cada botón ocupa toda la línea */
-    margin-bottom: 10px;
-  }
+/* ===========================
+   LISTA DE TAREAS
+=========================== */
+h2 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;  /* 19px */
 }
 
 ul {
   text-align: left;
   padding-left: 0;
-  margin-top: 15px;
+  margin-top: 0;
 }
+
 li {
   list-style: none;
   padding: 8px;
@@ -98,6 +107,14 @@ li {
     transform: translateY(0);
   }
 }
-#listaTareas li {
-  text-align: left;
+
+
+/* ===========================
+   RESPONSIVE MÓVIL
+=========================== */
+@media (max-width: 400px) {
+  .botones button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
