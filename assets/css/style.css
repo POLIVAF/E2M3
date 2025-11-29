@@ -13,11 +13,17 @@ html {
 
 body {
   font-family: Arial, sans-serif;
-  font-size: 16px;         /* tamaño de texto consistente */
-  line-height: 1.5;        /* altura de línea legible */
-  text-align: center;       /* títulos centrados */
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
   background: #f5f5f5;
   color: #222;
+
+  /* CENTRADO TOTAL */
+  display: flex;
+  justify-content: center; /* centra horizontal */
+  align-items: center;     /* centra vertical */
+  min-height: 100vh;       /* altura completa de la ventana */
   padding: 20px;
   transition: background 0.5s, color 0.5s;
 }
