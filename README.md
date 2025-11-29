@@ -29,3 +29,11 @@ Conceptos a Aplicar:
 ________________________________________
 Entrega:
 El trabajo deberá ser entregado a través de un repositorio público en GitHub. Por favor, comparte únicamente el enlace a dicho repositorio. 📤
+
+se dejan los link del repo de github y la page:
+
+code:
+https://github.com/POLIVAF/E2M3.git
+
+page:
+https://polivaf.github.io/E2M3/
