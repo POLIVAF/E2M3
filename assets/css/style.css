@@ -16,6 +16,7 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Estilo general de todos los botones */
 button {
   background: #4caf50;
   color: white;
@@ -25,25 +26,52 @@ button {
   cursor: pointer;
   font-size: 18px;
   transition: 0.3s;
+  flex: 1 1 auto; /* permite que crezcan y se achiquen proporcionalmente */
+  min-width: 100px; /* ancho mínimo para que no se aplasten */
 }
+
+/* Botones dentro del contenedor .botones */
+.botones {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* espacio entre botones */
+  flex-wrap: wrap; /* permite que se vayan a la siguiente línea en pantallas pequeñas */
+  margin-bottom: 20px;
+}
+
 .botones button {
   padding: 10px 18px;
-  border: none;
-  border-radius: 8px;
   font-size: 14px;
-  cursor: pointer;
-  transition: 0.2s;
 }
 
-/* Colores de botones */
-#btnAgregar { background: #4CAF50; color: white; }
-#btnAgregar:hover { background: #3e8e41; }
+/* Colores de botones específicos */
+#btnAgregar {
+  background: #4caf50;
+  color: white;
+}
+#btnAgregar:hover {
+  background: #3e8e41;
+}
 
-#btnReset { background: #ff4b4b; color: white; }
-#btnReset:hover { background: #d93636; }
+#btnReset {
+  background: #ff4b4b;
+  color: white;
+}
+#btnReset:hover {
+  background: #d93636;
+}
 
+/* Hover general */
 button:hover {
   background: #45a049;
+}
+
+/* Media query para pantallas muy pequeñas */
+@media (max-width: 400px) {
+  .botones button {
+    width: 100%; /* cada botón ocupa toda la línea */
+    margin-bottom: 10px;
+  }
 }
 
 ul {
