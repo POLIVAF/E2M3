@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lista de Tareas</title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lista de Tareas</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
 
-  <link rel="stylesheet" href="./assets/css/style.css">
-</head>
+  <body>
 
-<body>
-
-  <div class="container">
-    <h1>Lista de Tareas</h1>
-
-    <button id="btnEntrada">Ingresar tareas</button>
-    
-  </div>
-
-  <script src="./assets/js/app.js"></script>
-</body>
+    <div class="container">
+      <!-- Título arriba, centrado -->
+      <h1 class="titulo">📋 Lista de Tareas</h1>
+      <div class="botones">
+        <button id="btnAgregar">➕Agregar Tareas</button>
+        <button id="btnReset" class="danger">♻ Reset Listado</button>
+        <h2>Tareas ingresadas:</h2>
+        <ul id="listaTareas"></ul>
+      </div>
+    </div>
+    <script src="./assets/js/app.js"></script>
+  </body>
 </html>

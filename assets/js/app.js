@@ -1,26 +1,51 @@
-// Arreglo para guardar las tareas
-let listaDeTareas = [];
+document.addEventListener("DOMContentLoaded", () => {
+  // 1. Inicializar array vacío
+  let listaDeTareas = [];
 
-document.getElementById("btnAgregar").addEventListener("click", () => {
-  
-  let continuar;
+  // 2. Referencias a elementos
+  const listaHTML = document.getElementById("listaTareas");
+  const btnAgregar = document.getElementById("btnAgregar");
+  const btnReset = document.getElementById("btnReset");
 
-  do {
-    let nuevaTarea = prompt("Ingresa una nueva tarea:");
+  // --- Botón AGREGAR ---
+  btnAgregar.addEventListener("click", () => {
+    let continuar;
 
-    if (nuevaTarea !== null && nuevaTarea.trim() !== "") {
-      listaDeTareas.push(nuevaTarea.trim());
-    } else {
-      alert("La tarea no puede estar vacía.");
-    }
+    do {
+      let tarea = prompt("Ingresa una nueva tarea:");
 
-    continuar = confirm("¿Quieres agregar otra tarea?");
-    
-  } while (continuar);
+      if (tarea !== null && tarea.trim() !== "") {
+        listaDeTareas.push(tarea.trim());
+      } else {
+        alert("La tarea no puede estar vacía.");
+      }
 
-  // Mostrar lista final en consola
-  console.log("\n--- Lista de Tareas Pendientes ---");
-  for (let i = 0; i < listaDeTareas.length; i++) {
-    console.log(`${i + 1}. ${listaDeTareas[i]}`);
+      continuar = confirm("¿Quieres agregar otra tarea?");
+    } while (continuar);
+
+    mostrarLista();
+  });
+
+  // --- Botón RESET ---
+  btnReset.addEventListener("click", () => {
+    listaDeTareas = [];            // vaciar array
+    listaHTML.innerHTML = "";       // limpiar lista en HTML
+    console.clear();                // limpiar consola
+    console.log("--- LISTA DE TAREAS REINICIADA ---");
+  });
+
+  // --- Función para mostrar lista en consola + HTML ---
+  function mostrarLista() {
+    listaHTML.innerHTML = ""; // limpiar HTML
+
+    console.log("\n--- Lista de Tareas Pendientes ---");
+
+    listaDeTareas.forEach((tarea, i) => {
+      console.log(`${i + 1}. ${tarea}`);
+
+      const li = document.createElement("li");
+      li.textContent = `${i + 1}. ${tarea}`;
+      listaHTML.appendChild(li);
+    });
   }
 });
