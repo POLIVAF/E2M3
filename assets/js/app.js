@@ -2,7 +2,6 @@
 let listaDeTareas = [];
 
 const btnEntrada = document.getElementById("btnEntrada");
-const btnSalida = document.getElementById("btnSalida");
 const listaHTML = document.getElementById("listaHTML");
 
 // BOTÓN PARA INGRESAR TAREAS
