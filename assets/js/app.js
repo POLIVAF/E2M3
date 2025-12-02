@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let tarea = prompt("Ingresa una nueva tarea:");
 
       if (tarea !== null && tarea.trim() !== "") {
-        listaDeTareas.push(tarea.trim());
+        listaDeTareas.push(tarea.trim()); //se aplica PUSH
       } else {
         alert("La tarea no puede estar vacía.");
       }
@@ -39,10 +39,10 @@ document.addEventListener("DOMContentLoaded", () => {
     listaHTML.innerHTML = ""; // limpiar HTML
 
     console.log("\n--- Lista de Tareas Pendientes ---");
-
+    // -- bucle (forEach) para iterar sobre el array --
     listaDeTareas.forEach((tarea, i) => {
       console.log(`${i + 1}. ${tarea}`);
-
+    // -- Concatenar para formatear salida contemplate literal --
       const li = document.createElement("li");
       li.textContent = `${i + 1}. ${tarea}`;
       listaHTML.appendChild(li);
